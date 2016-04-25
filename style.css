@@ -1,0 +1,82 @@
+.head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+.body {
+  width: 50px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+}
+.hand1, .hand2 {
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+.leg1, .leg2 {
+  width: 25px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: blue;
+  border: 1px solid;
+  position: absolute;
+  top: 80px;
+  left: 15px;
+}
+
+.hand1 {
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: movement1 0.5s alternate infinite ease-out;
+}
+.leg2 {
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: movement3 0.5s alternate infinite ease-out;
+}
+
+.hand2 {
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: movement2 0.5s alternate infinite ease-in;
+}
+.leg1 {
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: movement4 0.5s alternate infinite ease-out;
+}
+
+@-webkit-keyframes movement1 {
+  from {
+    -webkit-transform: rotate(-30deg);
+  } to {
+    -webkit-transform: rotate(30deg);
+  }
+}
+
+@-webkit-keyframes movement2 {
+  from {
+    -webkit-transform: rotate(30deg);
+  } to {
+    -webkit-transform: rotate(-30deg);
+  }
+}
+
+@-webkit-keyframes movement3 {
+  from {
+    -webkit-transform: translate(10px);
+  } to {
+    -webkit-transform: rotate(-10px);
+  }
+}
+
+@-webkit-keyframes movement4 {
+  from {
+    -webkit-transform: translate(-10px);
+  } to {
+    -webkit-transform: rotate(10px);
+  }
+}

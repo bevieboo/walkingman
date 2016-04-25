@@ -69,7 +69,7 @@
   from {
     -webkit-transform: translate(10px);
   } to {
-    -webkit-transform: rotate(-10px);
+    -webkit-transform: translate(-10px);
   }
 }
 
@@ -77,6 +77,18 @@
   from {
     -webkit-transform: translate(-10px);
   } to {
-    -webkit-transform: rotate(10px);
+    -webkit-transform: translate(10px);
+  }
+}
+
+.man {
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: movement5 10.5s alternate infinite ease-out;
+}
+@-webkit-keyframes movement5 {
+  from {
+    -webkit-transform: translate(0);
+  } to {
+    -webkit-transform: translate(100%);
   }
 }

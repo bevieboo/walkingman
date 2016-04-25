@@ -1,10 +1,20 @@
+.man{
+  position: absolute;
+  left: 15;
+  top: 20%;
+  transition: all .3s;
+}
 .head {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: black;
 }
-.body {
+.body-wrap {
+  position: relative;
+}
+.body{
+  z-index: 1;
   width: 50px;
   height: 80px;
   border-radius: 50%;
@@ -32,6 +42,7 @@
 }
 
 .hand1 {
+  z-index: 2;
   -webkit-transform-origin: 0 0;
   -webkit-animation: movement1 0.5s alternate infinite ease-out;
 }
@@ -41,6 +52,7 @@
 }
 
 .hand2 {
+  z-index: 0;
   -webkit-transform-origin: 0 0;
   -webkit-animation: movement2 0.5s alternate infinite ease-in;
 }
@@ -78,17 +90,5 @@
     -webkit-transform: translate(-10px);
   } to {
     -webkit-transform: translate(10px);
-  }
-}
-
-.man {
-  -webkit-transform-origin: 0 0;
-  -webkit-animation: movement5 10.5s alternate infinite ease-out;
-}
-@-webkit-keyframes movement5 {
-  from {
-    -webkit-transform: translate(0);
-  } to {
-    -webkit-transform: translate(100%);
   }
 }
